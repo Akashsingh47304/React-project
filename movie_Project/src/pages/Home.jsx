@@ -14,13 +14,37 @@ function Home(){
     }
     return <div className="home min-h-screen bg-gray-900 text-white ">
         <form  onSubmit={handleSearch} className="search-form justify-center flex pt-3 ">
-            <input type="text"
+            <input
+        
+             type="text"
              placeholder="Search movies..."
-              className="Search-input" 
+              className="
+        bg-gray-800
+        text-white
+        border border-gray-600
+        rounded-lg
+        px-4 py-2
+        shadow-lg
+        focus:outline-none
+        focus:ring-2
+        focus:ring-blue-500
+        focus:border-blue-500
+        w-80
+    " 
               value={searchQuery}
               onChange={(e)=>setSearchQuery(e.target.value)}
               />
-        <button type="submit" className="Search-button">Search</button>
+        <button type="submit"   
+          className="
+        ml-2
+        px-4 py-2
+        bg-red-600
+        rounded-lg
+        shadow-lg
+        hover:bg-green-600
+        transition
+    ">
+            Search</button>
         </form>
         <div className="movie-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
             {movies.map((movie)=>
