@@ -1,14 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/Foody Zone.svg";
-
-function Navigation() {
+import App from "../App";
+import { useState } from "react";
+function Navigation({searchQuery,setSearchQuery}) {
   const navLinkClass = ({ isActive }) =>
     `px-4 py-2 rounded-lg transition ${
       isActive
         ? "bg-red-700 text-white"
         : "bg-red-600 text-white hover:bg-red-700"
     }`;
+
+  
+
 
   return (
     <nav>
@@ -33,12 +37,15 @@ function Navigation() {
             Dinner
           </NavLink>
         </div>
+         <input
+        type="text"
+        placeholder="Search..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className="border-2 border-red-500 rounded-lg px-4 py-2 text-white bg-transparent placeholder:text-gray-400 focus:outline-none focus:border-red-600"
+      />
 
-        <input
-          type="text"
-          placeholder="Search..."
-          className="border-2 border-red-500 rounded-lg px-4 py-2 text-white bg-transparent placeholder:text-gray-400 focus:outline-none focus:border-red-600"
-        />
+      
       </div>
 
       {/* Mobile Navbar */}
