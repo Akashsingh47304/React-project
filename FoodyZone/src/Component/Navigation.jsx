@@ -41,7 +41,9 @@ function Navigation({searchQuery,setSearchQuery}) {
         type="text"
         placeholder="Search..."
         value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        onChange={(e) =>{
+              console.log(e.target.value);
+           setSearchQuery(e.target.value)}}
         className="border-2 border-red-500 rounded-lg px-4 py-2 text-white bg-transparent placeholder:text-gray-400 focus:outline-none focus:border-red-600"
       />
 

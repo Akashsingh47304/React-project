@@ -19,7 +19,10 @@ function App() {
 
   return (
     <>
-   <Navigation/>
+   <Navigation
+  searchQuery={searchQuery}
+  setSearchQuery={setSearchQuery}
+/>
     
    <div
         className="min-h-screen bg-cover bg-center bg-no-repeat"
